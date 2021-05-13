@@ -3,18 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sphinx-github-pages's documentation!
+Welcome to Sphinx on GitHub Pages!
 ===============================================
+
+This is a sample repository to test the automated deployment of Sphinx documentation on GitHub pages using GitHub Actions.
+For more information, check the :doc:`configuration` or the `Sphinx Build Action documentation <https://github.com/ammaraskar/sphinx-action>`_.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   configuration
