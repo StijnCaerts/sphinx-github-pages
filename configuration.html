@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Configuration</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="Welcome to Sphinx on GitHub Pages!" href="index.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Sphinx on GitHub Pages</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-sphinx-on-github-pages">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Configuration</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#sphinx-dependencies" class="reference internal">Sphinx Dependencies</a></li>
+                
+                  <li class="toctree-l2"><a href="#github-action" class="reference internal">GitHub Action</a></li>
+                
+                  <li class="toctree-l2"><a href="#github-pages" class="reference internal">GitHub Pages</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Configuration</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Sphinx on GitHub Pages!</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<section id="sphinx-dependencies">
+<h2>Sphinx Dependencies<a class="headerlink" href="#sphinx-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>If you use custom dependencies in your Sphinx build, make sure to include them in a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in your documentation directory.</p>
+</section>
+<section id="github-action">
+<h2>GitHub Action<a class="headerlink" href="#github-action" title="Permalink to this headline">¶</a></h2>
+<p>This GitHub Action will check-out the repository and use the <code class="docutils literal notranslate"><span class="pre">sphinxdoc/sphinx</span></code> Docker image to build the documentation in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory.
+Then an artifact of the HTML output is created and the documentation is committed on the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch is initialised again on every build and force pushed to the repository.
+This is done because I don’t want to keep the history of the built pages.</p>
+</div>
+</section>
+<section id="github-pages">
+<h2>GitHub Pages<a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
+<p>Configure GitHub Pages to serve your documentation from the root of the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.
+You should now be able to browse your documentation on GitHub Pages!</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Sphinx on GitHub Pages!</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, Stijn Caerts.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
