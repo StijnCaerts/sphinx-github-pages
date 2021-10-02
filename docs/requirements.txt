@@ -1,3 +1,2 @@
-sphinx~=2.4
 karma_sphinx_theme
 sphinx-copybutton
