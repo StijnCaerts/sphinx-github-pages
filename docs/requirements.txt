@@ -1,2 +1,2 @@
-karma_sphinx_theme
+sphinx-press-theme
 sphinx-copybutton
