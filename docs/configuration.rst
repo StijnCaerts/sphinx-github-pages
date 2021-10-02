@@ -10,7 +10,7 @@ If you use custom dependencies in your Sphinx build, make sure to include them i
 GitHub Action
 -------------
 
-This GitHub Action will check-out the repository and use ``sphinx-action`` to build the documentation in the ``docs/`` directory.
+This GitHub Action will check-out the repository and use the ``sphinxdoc/sphinx`` Docker image to build the documentation in the ``docs/`` directory.
 Then an artifact of the HTML output is created and the documentation is committed on the ``gh-pages`` branch.
 
 .. note::
